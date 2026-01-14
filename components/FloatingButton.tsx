@@ -10,11 +10,20 @@ const FloatingButton: React.FC = () => {
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group"
       aria-label="Fale conosco no WhatsApp"
     >
-      <div className="bg-white text-slate-800 px-4 py-2 rounded-lg shadow-md text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block transform translate-x-4 group-hover:translate-x-0">
-        Fale conosco
+      {/* Tooltip */}
+      <div className="glass px-4 py-2.5 rounded-xl border border-white/10 shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:block transform translate-x-4 group-hover:translate-x-0">
+        <span className="text-white text-sm font-medium whitespace-nowrap">Fale conosco</span>
       </div>
-      <div className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 animate-bounce shadow-green-500/30">
-        <MessageCircle className="w-7 h-7 fill-white/20" />
+
+      {/* Button */}
+      <div className="relative">
+        {/* Glow ring */}
+        <div className="absolute inset-0 bg-green-500 rounded-full blur-xl opacity-50 animate-pulse group-hover:opacity-80 transition-opacity" />
+
+        {/* Button */}
+        <div className="relative bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transition-all duration-300 group-hover:scale-110">
+          <MessageCircle className="w-7 h-7" />
+        </div>
       </div>
     </a>
   );

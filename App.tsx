@@ -10,7 +10,7 @@ import FloatingButton from './components/FloatingButton';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-blue-200 selection:text-blue-900">
+    <div className="min-h-screen bg-brand-darker font-sans text-white selection:bg-blue-500/30 selection:text-white bg-mesh">
       <Header />
       <main>
         <Hero />
